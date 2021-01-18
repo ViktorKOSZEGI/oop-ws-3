@@ -14,6 +14,10 @@ public class Main {
                 new Cat("Cirmi", false),
                 new Dog("Morzsa", true)));
         Owner myOwner = new Owner(animals);
-        myOwner.feed();
+        try {
+            myOwner.feed();
+        } catch (FeedException e) {
+            e.printStackTrace();
+        }
     }
 }

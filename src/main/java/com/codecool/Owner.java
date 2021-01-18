@@ -11,9 +11,14 @@ public class Owner {
         this.animals = animals;
     }
 
-    public void feed() {
+    public void feed() throws FeedException {
         for (Animal myAnimal: animals) {
-            myAnimal.feed();
+            if (myAnimal instanceof Dog) {
+                myAnimal.eat(Food.BONE);
+            }
+            else {
+                myAnimal.eat(Food.BONE);
+            }
         }
     }
 }

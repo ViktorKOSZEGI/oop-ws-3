@@ -12,4 +12,12 @@ public class Dog extends Animal{
             System.out.println("vau");
         }
     }
+
+    @Override
+    public void eat(Food myFood) throws FeedException {
+        if (!(myFood.equals(Food.BONE))) {
+            throw new FeedException(FeedExceptionCode.I_DONT_LIKE_MOUSE);
+        }
+        super.eat(myFood);
+    }
 }
